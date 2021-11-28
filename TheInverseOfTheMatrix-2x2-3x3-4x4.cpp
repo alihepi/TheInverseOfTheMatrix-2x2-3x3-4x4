@@ -371,7 +371,7 @@ int main() {
 }
 
 		endofprogram:
-			printf("\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t @alihappy \n");
+			printf("\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t GitHub: @alihepi \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Twitter: @alihepi \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Instagram: @alihappy_ \n\n");
 	
 	getch();
 	return 0;
