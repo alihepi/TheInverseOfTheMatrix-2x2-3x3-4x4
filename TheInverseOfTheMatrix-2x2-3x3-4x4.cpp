@@ -151,13 +151,13 @@ int main() {
 			
 		if(select=='Y' || select=='y') {
 			
-			FILE *file_pointer_2x2 = fopen("2x2_The_Inverse_of_the_Matrix","w");
+			FILE *file_pointer_2x2 = fopen("2x2_The_Inverse_of_the_Matrix.txt","w");
 				
 				if (file_pointer_2x2 == NULL){
 					printf("The File Could Not be Saved");
 				}
 				else {
-					file_pointer_2x2 = fopen("2x2_The_Inverse_of_the_Matrix","a");
+					file_pointer_2x2 = fopen("2x2_The_Inverse_of_the_Matrix.txt","a");
 					
 					a11_2x2=(inversematris2x2[0][0]), a12_2x2=(inversematris2x2[0][1]);
 					a21_2x2=(inversematris2x2[1][0]), a22_2x2=(inversematris2x2[1][1]);
@@ -303,13 +303,13 @@ int main() {
 		
 		if(select=='Y' || select=='y') {
 			
-			FILE *file_pointer_3x3 = fopen("3x3_The_Inverse_of_the_Matrix","w");
+			FILE *file_pointer_3x3 = fopen("3x3_The_Inverse_of_the_Matrix.txt","w");
 				
 				if (file_pointer_3x3 == NULL){
 					printf("The File Could Not be Saved");
 				}
 				else {
-					file_pointer_3x3 = fopen("3x3_The_Inverse_of_the_Matrix","a");
+					file_pointer_3x3 = fopen("3x3_The_Inverse_of_the_Matrix.txt","a");
 					
 					a11_3x3=(inversematris3x3[0][0]), a12_3x3=(inversematris3x3[0][1]), a13_3x3=(inversematris3x3[0][2]);
 					a21_3x3=(inversematris3x3[1][0]), a22_3x3=(inversematris3x3[1][1]), a23_3x3=(inversematris3x3[1][2]);
@@ -486,13 +486,13 @@ int main() {
 		
 		if(select=='Y' || select=='y') {
 			
-			FILE *file_pointer_4x4 = fopen("4x4_The_Inverse_of_the_Matrix","w");
+			FILE *file_pointer_4x4 = fopen("4x4_The_Inverse_of_the_Matrix.txt","w");
 				
 				if (file_pointer_4x4 == NULL){
 					printf("The File Could Not be Saved");
 				}
 				else {
-					file_pointer_4x4 = fopen("4x4_The_Inverse_of_the_Matrix","a");
+					file_pointer_4x4 = fopen("4x4_The_Inverse_of_the_Matrix.txt","a");
 					
 					a11_4x4=(inversematris4x4[0][0]),a12_4x4=(inversematris4x4[0][1]),a13_4x4=(inversematris4x4[0][2]),a14_4x4=(inversematris4x4[0][3]);
 					a21_4x4=(inversematris4x4[1][0]),a22_4x4=(inversematris4x4[1][1]),a23_4x4=(inversematris4x4[1][2]),a24_4x4=(inversematris4x4[1][3]);
