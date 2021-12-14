@@ -27,7 +27,9 @@ int main() {
 		float inversematris2x2[2][2];
 		int l2x2,m2x2;
 		
+			// save
 			float a11_2x2,a12_2x2,a21_2x2,a22_2x2;
+			float s_a11_2x2,s_a12_2x2,s_a21_2x2,s_a22_2x2;
 
 			
 
@@ -42,9 +44,10 @@ int main() {
 		int l3x3,m3x3;
 		int c3x3,d3x3;
 			float process1,process2,process3;
-				
+			
+			//save	
 			float a11_3x3,a12_3x3,a13_3x3,a21_3x3,a22_3x3,a23_3x3,a31_3x3,a32_3x3,a33_3x3;
-
+			float s_a11_3x3,s_a12_3x3,s_a13_3x3,s_a21_3x3,s_a22_3x3,s_a23_3x3,s_a31_3x3,s_a32_3x3,s_a33_3x3;
 			
 
 	/* 4x4 Matris */
@@ -61,8 +64,9 @@ int main() {
 			float a,b,c,aa,bb,cc,d,e,f,dd,ee,ff,g,h,i,gg,hh,ii,r,s,t,rr,ss,tt;
 			float b11,b12,b13,b14,b21,b22,b23,b24,b31,b32,b33,b34,b41,b42,b43,b44;
 			
+			//save
 			float a11_4x4,a12_4x4,a13_4x4,a14_4x4,a21_4x4,a22_4x4,a23_4x4,a24_4x4,a31_4x4,a32_4x4,a33_4x4,a34_4x4,a41_4x4,a42_4x4,a43_4x4,a44_4x4;
-					
+			float s_a11_4x4,s_a12_4x4,s_a13_4x4,s_a14_4x4,s_a21_4x4,s_a22_4x4,s_a23_4x4,s_a24_4x4,s_a31_4x4,s_a32_4x4,s_a33_4x4,s_a34_4x4,s_a41_4x4,s_a42_4x4,s_a43_4x4,s_a44_4x4;		
 
 				
 
@@ -86,8 +90,7 @@ int main() {
 				printf("\t"); scanf("%d", &matris2x2[i2x2][j2x2]);
 			}
 		}
-
-		
+				
 
 	printf("\n\n\tYour 2-square matrix:");
 	printf("\n\n");
@@ -101,6 +104,10 @@ int main() {
 		printf("\n\n");
 	}
 
+		s_a11_2x2 = matris2x2[0][0];
+		s_a12_2x2 = matris2x2[0][1];
+		s_a21_2x2 = matris2x2[1][0] ;
+		s_a22_2x2 = matris2x2[1][1];
 		
 
 		/* Finding the inverse of a 2x2 matrix by the determinant path */
@@ -162,6 +169,9 @@ int main() {
 					a11_2x2=(inversematris2x2[0][0]), a12_2x2=(inversematris2x2[0][1]);
 					a21_2x2=(inversematris2x2[1][0]), a22_2x2=(inversematris2x2[1][1]);
 					
+					fprintf(file_pointer_2x2,"Your matrix:\n");
+					fprintf(file_pointer_2x2,"%.2f\t%.2f \n%.2f\t%.2f", s_a11_2x2, s_a12_2x2, s_a21_2x2, s_a22_2x2);
+					fprintf(file_pointer_2x2,"\n\nThe Inverse of the Matrix\n");
 					fprintf(file_pointer_2x2,"%.2f\t%.2f \n%.2f\t%.2f", a11_2x2, a12_2x2, a21_2x2, a22_2x2);
 
 					}		
@@ -218,6 +228,15 @@ int main() {
 		printf("\n\n");
 	}
 
+	s_a11_3x3 = matris3x3[0][0];
+	s_a12_3x3 = matris3x3[0][1];
+	s_a13_3x3 = matris3x3[0][2];
+		s_a21_3x3 = matris3x3[1][0];
+		s_a22_3x3 = matris3x3[1][1];
+		s_a23_3x3 = matris3x3[1][2];
+	s_a31_3x3 = matris3x3[2][0];
+	s_a32_3x3 = matris3x3[2][1];
+	s_a33_3x3 = matris3x3[2][2];
 	
 
 	/* Finding the inverse of a 3x3 matrix by the determinant path */
@@ -314,7 +333,10 @@ int main() {
 					a11_3x3=(inversematris3x3[0][0]), a12_3x3=(inversematris3x3[0][1]), a13_3x3=(inversematris3x3[0][2]);
 					a21_3x3=(inversematris3x3[1][0]), a22_3x3=(inversematris3x3[1][1]), a23_3x3=(inversematris3x3[1][2]);
 					a31_3x3=(inversematris3x3[2][0]), a32_3x3=(inversematris3x3[2][1]), a33_3x3=(inversematris3x3[2][2]);
-
+					
+					fprintf(file_pointer_3x3,"Your matrix:\n");
+					fprintf(file_pointer_3x3,"%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f", s_a11_3x3, s_a12_3x3, s_a13_3x3, s_a21_3x3, s_a22_3x3, s_a23_3x3, s_a31_3x3, s_a32_3x3, s_a33_3x3);
+					fprintf(file_pointer_3x3,"\n\nThe Inverse of the Matrix\n");
 					fprintf(file_pointer_3x3,"%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f", a11_3x3, a12_3x3, a13_3x3, a21_3x3, a22_3x3, a23_3x3, a31_3x3, a32_3x3, a33_3x3);
 	
 					}
@@ -372,6 +394,22 @@ int main() {
 		printf("\n\n");
 	}
 
+	s_a11_4x4 = matris4x4[0][0];
+	s_a12_4x4 = matris4x4[0][1];
+	s_a13_4x4 = matris4x4[0][2];
+	s_a14_4x4 = matris4x4[0][3];
+		s_a21_4x4 = matris4x4[1][0];
+		s_a22_4x4 = matris4x4[1][1];
+		s_a23_4x4 = matris4x4[1][2];
+		s_a24_4x4 = matris4x4[1][3];
+	s_a31_4x4 = matris4x4[2][0];
+	s_a32_4x4 = matris4x4[2][1];
+	s_a33_4x4 = matris4x4[2][2];
+	s_a34_4x4 = matris4x4[2][3];
+		s_a41_4x4 = matris4x4[3][0];
+		s_a42_4x4 = matris4x4[3][1];
+		s_a43_4x4 = matris4x4[3][2];
+		s_a44_4x4 = matris4x4[3][3];
 	
 
 	/* Finding the inverse of a 4x4 matrix by the determinant path */
@@ -499,6 +537,9 @@ int main() {
 					a31_4x4=(inversematris4x4[2][0]),a32_4x4=(inversematris4x4[2][1]),a33_4x4=(inversematris4x4[2][2]),a34_4x4=(inversematris4x4[3][3]);
 					a41_4x4=(inversematris4x4[3][0]),a42_4x4=(inversematris4x4[4][1]),a43_4x4=(inversematris4x4[3][2]),a44_4x4=(inversematris4x4[4][3]);
 					
+					fprintf(file_pointer_4x4,"Your matrix:\n");
+					fprintf(file_pointer_4x4,"%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f", s_a11_4x4, s_a12_4x4, s_a13_4x4, s_a14_4x4, s_a21_4x4, s_a22_4x4, s_a23_4x4, s_a24_4x4, s_a31_4x4, s_a32_4x4, s_a33_4x4, s_a34_4x4, s_a41_4x4, s_a42_4x4, s_a43_4x4, s_a44_4x4);
+					fprintf(file_pointer_4x4,"\n\nThe Inverse of the Matrix\n");					
 					fprintf(file_pointer_4x4,"%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f \n%.2f\t%.2f\t%.2f\t%.2f", a11_4x4,a12_4x4,a13_4x4,a14_4x4,a21_4x4,a22_4x4,a23_4x4,a24_4x4,a31_4x4,a32_4x4,a33_4x4,a34_4x4,a41_4x4,a42_4x4,a43_4x4,a44_4x4);
 
 					}
